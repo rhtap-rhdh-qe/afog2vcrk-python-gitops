@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: afog2vcrk-python
+  janus-idp.io/tekton: afog2vcrk-python
+  backstage.io/kubernetes-id: afog2vcrk-python
+  backstage.io/kubernetes-namespace: rhtap-app 
+  app.kubernetes.io/part-of: afog2vcrk-python
+resources:
+- deployment.yaml
+- route.yaml
+- service.yaml
